@@ -16,12 +16,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
         <AuthContextProvider>
           <CartProvider>
             <OrderProvider>
               <Navbar />
-              {children}
+              <div className="flex justify-center px-4 pt-40">
+                <div className="w-full max-w-7xl">
+                  {children}
+                </div>
+              </div>
               <h1>this is footer</h1>
             </OrderProvider>
           </CartProvider>
